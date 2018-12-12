@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>k
+    <style>
+        *{margin:0;padding:0;}
+    </style>
+    <script src="../js/easeljs.js"></script>
+</head>
+<body>
+<canvas id="gameView" width="400" height="400" style="background:#cccccc;"></canvas>
+
+<script>
+    var stage = new createjs.Stage("gameView");//创建舞台
+    var graphics = new createjs.Graphics().beginFill("#ff0000").drawRect(0, 0, 100, 100);
+    var line = new createjs.Graphics().beginStroke("red").moveTo(125,125).lineTo(300,300);
+    var shape = new createjs.Shape(graphics);
+    stage.addChild(shape);
+    stage.update();
+</script>
+</body>
+</html>
